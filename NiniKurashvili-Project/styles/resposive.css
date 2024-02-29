@@ -1,0 +1,202 @@
+@media (min-width:1800px){
+
+    main section#welcome{
+        grid-template-rows: 2fr 1.5fr 2.5fr;
+    }
+    main section#about{
+        grid-template-rows: 1fr 2fr;
+    }
+    div.photoabout{
+        background-size:contain;
+        background-position-x: right;
+    }
+    div.paragabout{
+        padding: 0px 100px;
+       width: 550px;
+    }
+    div#ourcone,div#ourctwo,div#ourcthree,div#ourcfour,div#ourcfive,div#ourcsix,div#ourcseven{
+        height: 470px;
+        
+    }
+    .buttonoverphoto a{
+        font-size: 20px;
+    }
+    main section#ourc div#ourcmain div {
+        background-size:initial;
+    }
+    main section#about div.paragabout{
+        width: 500px;
+        height: 550px;
+    }
+}
+@media screen and (max-width:1800px) and (min-width:1080px){
+main section#about div#about2 div.photoabout{
+    height: 600px;
+}
+}
+@media(max-width:1360px){
+main section#about{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+}
+    
+
+@media(min-width:961px){
+    div#one{
+        grid-column-start: 1;
+        grid-column-end: 4;
+      } 
+      div#two{
+    
+        grid-column-start: 1;
+        grid-column-end: 3;
+       
+      }
+      main section#contact form input#tel,main section#contact form textarea#message,
+      main section#contact form  button{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+      }
+    
+}
+  @media(max-width: 960px){
+    main section #about2{
+    
+        grid-template-columns:1fr ;
+       
+      }
+      div.photoabout{
+        height:552px;
+      }
+    main{
+        padding-bottom:0;
+    }
+    main section#about{
+        margin-bottom:0;
+    }
+    main section #about2 {
+        row-gap: 20px;
+    }
+    main section#about{
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    main section#about div.textabout p{
+        margin: 16px 0;
+    }
+    main section#welcome{
+        width: 100%;
+        grid-template-columns:1fr !important;
+       grid-template-rows: repeat(6, 1fr) ;
+        
+    }
+    main section#ourc div#ourcmain{
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+    }
+    div#four,div#six{
+       
+    background-position-y: 40%;
+         
+    }
+    main section#contact div#inputform{
+        width: 100%;
+    }
+    main section#contact div#inputform form{
+        grid-template-columns: 1fr;
+        width: 50%;
+        margin: 68px 10px;
+        
+      
+    }
+    main{
+         padding-left: 0;
+        padding-right: 0; 
+    }
+    
+    div#five{
+        background-position-y: 20%;
+    }
+    main section#ourc div#ourcmain div {
+        background-size:initial;
+    }
+    main section#about{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+       
+    }
+   
+} 
+
+@media (max-width:600px){
+    div.photoabout{
+        height:320px;
+    }  
+    main{
+       padding-left: 0;
+        padding-right: 0;
+    } 
+    main section#contact {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    main section#contact div#inputform{
+        width: 100%;
+    }
+    main section#ourc{
+        padding-left:0px ;
+        padding-right: 0px;
+    }
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+   
+}
+@media (max-width:358px){
+    main section#welcome div#two h1{
+        font-size: 35px;
+    }
+
+
+}
+
+
+@media (max-width: 960px) {
+    header nav label.check {
+
+      display: block;
+    }
+  
+    header nav ul {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top:0px;
+      right: -100%;
+      transition: 0.2s ease;
+      z-index: 10;
+      background-color: var(--lightpink-color);
+      flex-direction: column;
+      gap: 50px;
+    }
+  
+    header nav input#check:checked~ul {
+      right: 0;
+    }
+    header nav input#check:checked~label.checktwo{
+        display: block;
+        position:fixed;
+        z-index: 20;
+        transition: 1s ease;
+        top: 40px;  
+    }
+  } 
+  
+   
