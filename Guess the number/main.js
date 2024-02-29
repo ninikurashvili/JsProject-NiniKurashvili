@@ -4,7 +4,7 @@ while (true) {
   let numberOfTries = +prompt("Enter number of tries"); // მომხმარებელს შემოყავს ცდების რაოდენობა;
 
   //თუ ცდების რაოდენობა ნულია ან Nan,მაშინ ცდების რაოდენობა ხდება 10;
-  if (numberOfTries === 0 || isNaN(numberOfTries)) {
+  if (numberOfTries <= 0 || isNaN(numberOfTries)) {
     numberOfTries = 10;
   }
 
@@ -48,7 +48,23 @@ while (true) {
   }
   console.log("Secret number was:", secretNumber); //ყველა შემთხვევაში ვალოგინებ საბოლოოდ ჩაფიქრებულ რიცხვს;
 
-  guessedNumberArray.sort((a, b) => a - b); //ვასორტირებ მასივს ზრდადობით;
+  //ვასორტირებ მასივს ზრდადობით;
+  bubbleSort(guessedNumberArray);
+
+  function bubbleSort(array = []) {
+    let swaped = false;
+    do {
+      swaped = false;
+      for (let i = 0; i < array.length - 1; i++) {
+        if (array[i] > array[i + 1]) {
+          const higherNumber = array[i];
+          array[i] = array[i + 1];
+          array[i + 1] = higherNumber;
+          swaped = true;
+        }
+      }
+    } while (swaped);
+  }
 
   //თუ მოხმარებელმა შემოიყვანა რიცხვი და წააგო ვალოგინებ
   //მარცხნიდან და მარჯვნიდან ყველაზე ახლო ინფუთ რიცხვების მიახლოებებს ჩაფიქრებულ რიცხვთან;
